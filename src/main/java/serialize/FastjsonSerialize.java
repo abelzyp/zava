@@ -14,12 +14,10 @@ import com.alibaba.fastjson.JSON;
 public class FastjsonSerialize {
 
     public static String serialize(Object obj) {
-        String json = JSON.toJSONString(obj);
-        return json;
+        return JSON.toJSONString(obj);
     }
 
-    public static Object deserialize(String json, Class<?> clazz) {
-        Object obj = JSON.parseObject(json, clazz);
-        return obj;
+    static Object deserialize(String json, Class<?> clazz) {
+        return JSON.parseObject(json, clazz);
     }
 }

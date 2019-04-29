@@ -27,7 +27,7 @@ public class KryoSerialize {
         return bytes;
     }
 
-    public static Object deserialize(byte[] bytes) {
+    static Object deserialize(byte[] bytes) {
         Input input = new Input(bytes);
         Object obj = kryo.readClassAndObject(input);
         input.close();

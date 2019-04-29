@@ -16,12 +16,10 @@ public class GsonSerialize {
     private static Gson gson = new Gson();
 
     public static String serialize(Object obj) {
-        String json = gson.toJson(obj);
-        return json;
+        return gson.toJson(obj);
     }
 
-    public static Object deserialize(String json, Class<?> clazz) {
-        Object obj = gson.fromJson(json, clazz);
-        return obj;
+    static Object deserialize(String json, Class<?> clazz) {
+        return gson.fromJson(json, clazz);
     }
 }

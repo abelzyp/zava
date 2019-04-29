@@ -12,96 +12,91 @@ import java.io.IOException;
 @Slf4j
 public class SerializationTest {
 
-    private static final String TIME_AND_SIZE = "{}方式,对象大小:{}字符,序列化耗时:{}ms,序列化后大小:{}字符,反序列化耗时:{}ms.";
+    private static final String TIME_AND_SIZE = "{}方式,对象大小:{}字符,序列化耗时:{}ms,序列化后大小:{}字符,反序列化耗时:{}ms,反序列化后对象:{}";
+
+    private static PoiGoodsPrice poiGoodsPrice = new SerializeModelBuilder().buildPoiGoodsPrice();
 
     @Test
     public void jdkSerializeTest() throws IOException, ClassNotFoundException {
-        GoodsPrice goodsPrice = new SerializeModelBuilder().buildGoodsPrice();
 
         long start = System.currentTimeMillis();
-        byte[] bytes = JdkSerialize.serialize(goodsPrice);
+        byte[] bytes = JdkSerialize.serialize(poiGoodsPrice);
         long mid = System.currentTimeMillis();
-        GoodsPrice deserialize = (GoodsPrice) JdkSerialize.deserialize(bytes);
+        PoiGoodsPrice deserialize = (PoiGoodsPrice) JdkSerialize.deserialize(bytes);
         long end = System.currentTimeMillis();
 
-        log.info(TIME_AND_SIZE, JdkSerialize.class.getSimpleName(), goodsPrice.toString().length(), mid - start, bytes.length, end - mid);
+        log.info(TIME_AND_SIZE, JdkSerialize.class.getSimpleName(), poiGoodsPrice.toString().length(), mid - start, bytes.length, end - mid, deserialize);
     }
 
     @Test
     public void gsonSerialzeTest() {
-        GoodsPrice goodsPrice = new SerializeModelBuilder().buildGoodsPrice();
 
         long start = System.currentTimeMillis();
-        String serialize = GsonSerialize.serialize(goodsPrice);
+        String serialize = GsonSerialize.serialize(poiGoodsPrice);
         long mid = System.currentTimeMillis();
-        GoodsPrice deserialize = (GoodsPrice) GsonSerialize.deserialize(serialize, GoodsPrice.class);
+        PoiGoodsPrice deserialize = (PoiGoodsPrice) GsonSerialize.deserialize(serialize, PoiGoodsPrice.class);
         long end = System.currentTimeMillis();
 
-        log.info(TIME_AND_SIZE, GsonSerialize.class.getSimpleName(), goodsPrice.toString().length(), mid - start, serialize.length(), end - mid);
+        log.info(TIME_AND_SIZE, GsonSerialize.class.getSimpleName(), poiGoodsPrice.toString().length(), mid - start, serialize.length(), end - mid, deserialize);
     }
 
     @Test
     public void fastjsonSerializeTest() {
-        GoodsPrice goodsPrice = new SerializeModelBuilder().buildGoodsPrice();
 
         long start = System.currentTimeMillis();
-        String serialize = FastjsonSerialize.serialize(goodsPrice);
+        String serialize = FastjsonSerialize.serialize(poiGoodsPrice);
         long mid = System.currentTimeMillis();
-        GoodsPrice deserialize = (GoodsPrice) FastjsonSerialize.deserialize(serialize, GoodsPrice.class);
+        PoiGoodsPrice deserialize = (PoiGoodsPrice) FastjsonSerialize.deserialize(serialize, PoiGoodsPrice.class);
         long end = System.currentTimeMillis();
 
-        log.info(TIME_AND_SIZE, FastjsonSerialize.class.getSimpleName(), goodsPrice.toString().length(), mid - start, serialize.length(), end - mid);
+        log.info(TIME_AND_SIZE, FastjsonSerialize.class.getSimpleName(), poiGoodsPrice.toString().length(), mid - start, serialize.length(), end - mid, deserialize);
     }
 
     @Test
     public void jacksonSerializeTest() throws IOException {
-        GoodsPrice goodsPrice = new SerializeModelBuilder().buildGoodsPrice();
 
         long start = System.currentTimeMillis();
-        String serialize = JacksonSerialize.serialize(goodsPrice);
+        String serialize = JacksonSerialize.serialize(poiGoodsPrice);
         long mid = System.currentTimeMillis();
-        GoodsPrice deserialize = (GoodsPrice) JacksonSerialize.deserialize(serialize, GoodsPrice.class);
+        PoiGoodsPrice deserialize = (PoiGoodsPrice) JacksonSerialize.deserialize(serialize, PoiGoodsPrice.class);
         long end = System.currentTimeMillis();
 
-        log.info(TIME_AND_SIZE, JacksonSerialize.class.getSimpleName(), goodsPrice.toString().length(), mid - start, serialize.length(), end - mid);
+        log.info(TIME_AND_SIZE, JacksonSerialize.class.getSimpleName(), poiGoodsPrice.toString().length(), mid - start, serialize.length(), end - mid, deserialize);
     }
 
     @Test
     public void fstSerializeTest() {
-        GoodsPrice goodsPrice = new SerializeModelBuilder().buildGoodsPrice();
 
         long start = System.currentTimeMillis();
-        byte[] bytes = FstSerialize.serialize(goodsPrice);
+        byte[] bytes = FstSerialize.serialize(poiGoodsPrice);
         long mid = System.currentTimeMillis();
-        GoodsPrice deserialize = (GoodsPrice) FstSerialize.deserialize(bytes);
+        PoiGoodsPrice deserialize = (PoiGoodsPrice) FstSerialize.deserialize(bytes);
         long end = System.currentTimeMillis();
 
-        log.info(TIME_AND_SIZE, FstSerialize.class.getSimpleName(), goodsPrice.toString().length(), mid - start, bytes.length, end - mid);
+        log.info(TIME_AND_SIZE, FstSerialize.class.getSimpleName(), poiGoodsPrice.toString().length(), mid - start, bytes.length, end - mid, deserialize);
     }
 
     @Test
     public void kryoSerializeTest() {
-        GoodsPrice goodsPrice = new SerializeModelBuilder().buildGoodsPrice();
 
         long start = System.currentTimeMillis();
-        byte[] bytes = KryoSerialize.serialize(goodsPrice);
+        byte[] bytes = KryoSerialize.serialize(poiGoodsPrice);
         long mid = System.currentTimeMillis();
-        GoodsPrice deserialize = (GoodsPrice) KryoSerialize.deserialize(bytes);
+        PoiGoodsPrice deserialize = (PoiGoodsPrice) KryoSerialize.deserialize(bytes);
         long end = System.currentTimeMillis();
 
-        log.info(TIME_AND_SIZE, KryoSerialize.class.getSimpleName(), goodsPrice.toString().length(), mid - start, bytes.length, end - mid);
+        log.info(TIME_AND_SIZE, KryoSerialize.class.getSimpleName(), poiGoodsPrice.toString().length(), mid - start, bytes.length, end - mid, deserialize);
     }
 
     @Test
     public void protostuffSerializeTest() {
-        GoodsPrice goodsPrice = new SerializeModelBuilder().buildGoodsPrice();
 
         long start = System.currentTimeMillis();
-        byte[] bytes = ProtostuffSerialize.serialize(goodsPrice);
+        byte[] bytes = ProtostuffSerialize.serialize(poiGoodsPrice);
         long mid = System.currentTimeMillis();
-        GoodsPrice deserialize = ProtostuffSerialize.deserialize(bytes, GoodsPrice.class);
+        PoiGoodsPrice deserialize = ProtostuffSerialize.deserialize(bytes, PoiGoodsPrice.class);
         long end = System.currentTimeMillis();
 
-        log.info(TIME_AND_SIZE, ProtostuffSerialize.class.getSimpleName(), goodsPrice.toString().length(), mid - start, bytes.length, end - mid);
+        log.info(TIME_AND_SIZE, ProtostuffSerialize.class.getSimpleName(), poiGoodsPrice.toString().length(), mid - start, bytes.length, end - mid, deserialize);
     }
 }

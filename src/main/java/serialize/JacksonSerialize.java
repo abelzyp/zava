@@ -18,13 +18,11 @@ public class JacksonSerialize {
 
     public static String serialize(Object obj) throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
-        String json = mapper.writeValueAsString(obj);
-        return json;
+        return mapper.writeValueAsString(obj);
     }
 
-    public static Object deserialize(String json, Class<?> clazz) throws IOException {
+    static Object deserialize(String json, Class<?> clazz) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        Object obj = mapper.readValue(json, clazz);
-        return obj;
+        return mapper.readValue(json, clazz);
     }
 }

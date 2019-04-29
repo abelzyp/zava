@@ -20,7 +20,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @ToString
-public class GoodsPrice implements Serializable {
+class GoodsPrice implements Serializable {
 
     private static final long serialVersionUID = 8252570977670817713L;
 

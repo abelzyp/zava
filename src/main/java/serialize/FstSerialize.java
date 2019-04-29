@@ -19,7 +19,7 @@ public class FstSerialize {
         return configuration.asByteArray(obj);
     }
 
-    public static Object deserialize(byte[] bytes) {
+    static Object deserialize(byte[] bytes) {
         return configuration.asObject(bytes);
     }
 }

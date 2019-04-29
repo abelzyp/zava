@@ -53,6 +53,7 @@
         <protostuff.version>1.6.0</protostuff.version>
         <!--测试工具-->
         <junit.version>4.12</junit.version>
+        <jmh.version>1.21</jmh.version>
     </properties>
 
     <dependencies>
@@ -192,6 +193,17 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-core</artifactId>
+            <version>${jmh.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-generator-annprocess</artifactId>
+            <version>${jmh.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

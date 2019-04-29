@@ -24,7 +24,7 @@ public class JdkSerialize {
         return bs;
     }
 
-    public static Object deserialize(byte[] bytes) throws IOException, ClassNotFoundException {
+    static Object deserialize(byte[] bytes) throws IOException, ClassNotFoundException {
         ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
         ObjectInputStream ois = new ObjectInputStream(bais);
         Object obj = ois.readObject();

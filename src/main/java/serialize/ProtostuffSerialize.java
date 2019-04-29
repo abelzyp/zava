@@ -28,7 +28,7 @@ public class ProtostuffSerialize {
         return ProtostuffIOUtil.toByteArray(obj, schema, buffer);
     }
 
-    public static <T> T deserialize(byte[] bytes, Class<T> clazz) {
+    static <T> T deserialize(byte[] bytes, Class<T> clazz) {
         Schema<T> schema = getSchema(clazz);
         T obj = schema.newMessage();
         ProtostuffIOUtil.mergeFrom(bytes, obj, schema);

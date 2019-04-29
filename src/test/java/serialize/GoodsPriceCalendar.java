@@ -19,7 +19,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Builder
 @ToString
-public class GoodsPriceCalendar implements Serializable {
+class GoodsPriceCalendar implements Serializable {
 
     private static final long serialVersionUID = -1479984063603041294L;
 
