@@ -51,6 +51,9 @@
         <fst.version>2.57</fst.version>
         <kryo.version>4.0.0</kryo.version>
         <protostuff.version>1.6.0</protostuff.version>
+        <!--压缩工具包-->
+        <lz4.version>1.3.0</lz4.version>
+        <snappy.version>1.1.7.3</snappy.version>
         <!--测试工具-->
         <junit.version>4.12</junit.version>
         <jmh.version>1.21</jmh.version>
@@ -187,6 +190,17 @@
             <version>${protostuff.version}</version>
         </dependency>
 
+        <!--压缩工具包-->
+        <dependency>
+            <groupId>net.jpountz.lz4</groupId>
+            <artifactId>lz4</artifactId>
+            <version>${lz4.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.xerial.snappy</groupId>
+            <artifactId>snappy-java</artifactId>
+            <version>${snappy.version}</version>
+        </dependency>
 
         <!--测试工具包-->
         <dependency>
