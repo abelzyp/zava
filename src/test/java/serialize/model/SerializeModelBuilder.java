@@ -1,4 +1,4 @@
-package serialize;
+package serialize.model;
 
 import com.google.common.collect.Lists;
 
@@ -10,7 +10,7 @@ import java.util.stream.IntStream;
  * @author zhangyupeng
  * @date 2019-04-24
  */
-class SerializeModelBuilder {
+public class SerializeModelBuilder {
 
     /**
      * 构造1个poi下10个产品，每个产品包含5天价格日历

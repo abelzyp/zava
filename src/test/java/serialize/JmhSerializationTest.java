@@ -16,6 +16,8 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
+import serialize.model.PoiGoodsPrice;
+import serialize.model.SerializeModelBuilder;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -27,13 +29,13 @@ import java.util.concurrent.TimeUnit;
  * @date 2019-04-29
  */
 @BenchmarkMode(Mode.Throughput)
-@Warmup(iterations = 5)
-@Measurement(iterations = 10, time = 5, timeUnit = TimeUnit.SECONDS)
+@Warmup(iterations = 2)
+@Measurement(iterations = 5, time = 5, timeUnit = TimeUnit.SECONDS)
 @Threads(8)
 @Fork(1)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Benchmark)
-public class SerializationJmhTest {
+public class JmhSerializationTest {
 
     private PoiGoodsPrice poiGoodsPrice;
 
@@ -74,9 +76,9 @@ public class SerializationJmhTest {
 
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
-                .include(SerializationJmhTest.class.getSimpleName())
-                .warmupIterations(5)
-                .measurementIterations(10)
+                .include(JmhSerializationTest.class.getSimpleName())
+                .warmupIterations(2)
+                .measurementIterations(5)
                 .forks(1)
                 .jvmArgs("-server", "-Xms2048m", "-Xmx2048m")
 //                .addProfiler(GCProfiler.class)

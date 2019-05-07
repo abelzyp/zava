@@ -15,6 +15,8 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
+import serialize.model.PoiGoodsPrice;
+import serialize.model.SerializeModelBuilder;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -26,13 +28,13 @@ import java.util.concurrent.TimeUnit;
  * @date 2019-04-29
  */
 @BenchmarkMode(Mode.Throughput)
-@Warmup(iterations = 5)
-@Measurement(iterations = 10, time = 5, timeUnit = TimeUnit.SECONDS)
+@Warmup(iterations = 2)
+@Measurement(iterations = 5, time = 5, timeUnit = TimeUnit.SECONDS)
 @Threads(8)
 @Fork(1)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Benchmark)
-public class DeserializationJmhTest {
+public class JmhDeserializationTest {
 
     private byte[] jdkSerialize;
     private String gsonSerialize;
@@ -84,9 +86,9 @@ public class DeserializationJmhTest {
 
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
-                .include(DeserializationJmhTest.class.getSimpleName())
-                .warmupIterations(5)
-                .measurementIterations(10)
+                .include(JmhDeserializationTest.class.getSimpleName())
+                .warmupIterations(2)
+                .measurementIterations(5)
                 .forks(1)
                 .build();
         new Runner(opt).run();
