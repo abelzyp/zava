@@ -1,89 +1,46 @@
 package compress;
 
+import net.jpountz.lz4.LZ4BlockInputStream;
 import net.jpountz.lz4.LZ4BlockOutputStream;
 import net.jpountz.lz4.LZ4Compressor;
 import net.jpountz.lz4.LZ4Factory;
-import org.openjdk.jmh.annotations.Benchmark;
+import net.jpountz.lz4.LZ4FastDecompressor;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 /**
- * Java LZ4 implementations 压缩方式
+ * LZ4是一种无损数据压缩算法，着重于压缩和解压缩速度
  *
  * @author zhangyupeng
- * @date 2019-05-05
+ * @date 2019-05-08
  */
-public class Lz4Compress extends TestParent {
+public class Lz4Compress {
 
-    private final int BLOCK_64K = 64 * 1024;
-    private final int BLOCK_128K = 128 * 1024;
-    private final int MAX_BLOCK_SIZE = 32 * 1024 * 1024;
-
-    @Benchmark
-    int fastNative64K() throws IOException {
-        return lz4(LZ4Factory.nativeInstance().fastCompressor(), BLOCK_64K);
+    public static byte[] compress(byte[] srcBytes) throws IOException {
+        LZ4Factory factory = LZ4Factory.fastestInstance();
+        ByteArrayOutputStream byteOutput = new ByteArrayOutputStream();
+        LZ4Compressor compressor = factory.fastCompressor();
+        LZ4BlockOutputStream compressedOutput = new LZ4BlockOutputStream(
+                byteOutput, 2048, compressor);
+        compressedOutput.write(srcBytes);
+        compressedOutput.close();
+        return byteOutput.toByteArray();
     }
 
-    @Benchmark
-    int fastNative128K() throws IOException {
-        return lz4(LZ4Factory.nativeInstance().fastCompressor(), BLOCK_128K);
-    }
-
-    @Benchmark
-    int fastNative32M() throws IOException {
-        return lz4(LZ4Factory.nativeInstance().fastCompressor(), MAX_BLOCK_SIZE);
-    }
-
-    //Uncomment these tests if you want to see the performance of the less efficient implementations.
-    //Keep in mind that you will not get extra benefits from using those. The only 2 options which affect
-    //the output size are fast/high compressor and a compressor buffer size.
-    //In terms of performance, you will be affected more by a change of a slower compressor rather than
-    //by increasing a compressor buffer.
-
-    @Benchmark
-    int highNative() throws IOException {
-        return lz4(LZ4Factory.nativeInstance().highCompressor(), BLOCK_64K);
-    }
-
-//    @Benchmark
-//    int fastUnsafe() throws IOException {
-//        return lz4(LZ4Factory.unsafeInstance().fastCompressor(), BLOCK_64K);
-//    }
-//
-//    @Benchmark
-//    int highUnsafe() throws IOException {
-//        return lz4(LZ4Factory.unsafeInstance().highCompressor(), BLOCK_64K);
-//    }
-//
-//    @Benchmark
-//    int fastSafe() throws IOException {
-//        return lz4(LZ4Factory.safeInstance().fastCompressor(), BLOCK_64K);
-//    }
-//
-//    @Benchmark
-//    int highSafe() throws IOException {
-//        return lz4(LZ4Factory.safeInstance().highCompressor(), BLOCK_64K);
-//    }
-
-    @Benchmark
-    int fastNativeDouble64K() throws IOException {
-        final LZ4Compressor compressor = LZ4Factory.nativeInstance().fastCompressor();
-        return baseBenchmark(os -> new LZ4BlockOutputStream(new LZ4BlockOutputStream(os, BLOCK_64K, compressor), BLOCK_64K, compressor));
-    }
-
-    @Benchmark
-    int fastNativeDouble32M() throws IOException {
-        final LZ4Compressor compressor = LZ4Factory.nativeInstance().fastCompressor();
-        return baseBenchmark(os -> new LZ4BlockOutputStream(new LZ4BlockOutputStream(os, MAX_BLOCK_SIZE, compressor), MAX_BLOCK_SIZE, compressor));
-    }
-
-    @Benchmark
-    int fastNativeTriple32M() throws IOException {
-        final LZ4Compressor compressor = LZ4Factory.nativeInstance().fastCompressor();
-        return baseBenchmark(os -> new LZ4BlockOutputStream(new LZ4BlockOutputStream(new LZ4BlockOutputStream(os, MAX_BLOCK_SIZE, compressor), MAX_BLOCK_SIZE, compressor), MAX_BLOCK_SIZE, compressor));
-    }
-
-    private int lz4(final LZ4Compressor compressor, final int blockSize) throws IOException {
-        return baseBenchmark(os -> new LZ4BlockOutputStream(os, blockSize, compressor));
+    public static byte[] uncompress(byte[] bytes) throws IOException {
+        LZ4Factory factory = LZ4Factory.fastestInstance();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        LZ4FastDecompressor decompresser = factory.fastDecompressor();
+        LZ4BlockInputStream lzis = new LZ4BlockInputStream(
+                new ByteArrayInputStream(bytes), decompresser);
+        int count;
+        byte[] buffer = new byte[2048];
+        while ((count = lzis.read(buffer)) != -1) {
+            baos.write(buffer, 0, count);
+        }
+        lzis.close();
+        return baos.toByteArray();
     }
 }

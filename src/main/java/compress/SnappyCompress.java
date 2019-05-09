@@ -1,26 +1,23 @@
 package compress;
 
-import org.openjdk.jmh.annotations.Benchmark;
-import org.xerial.snappy.SnappyFramedOutputStream;
-import org.xerial.snappy.SnappyOutputStream;
+import org.xerial.snappy.Snappy;
 
 import java.io.IOException;
 
 /**
- * Snappy library 压缩方式
+ * Snappy（以前称Zippy）是Google基于LZ77的思路用C++语言编写的快速数据压缩与解压程序库，并在2011年开源。
+ * 它的目标并非最大压缩率或与其他压缩程序库的兼容性，而是非常高的速度和合理的压缩率。
  *
  * @author zhangyupeng
- * @date 2019-05-05
+ * @date 2019-05-08
  */
-public class SnappyCompress extends TestParent {
+public class SnappyCompress {
 
-    @Benchmark
-    int snappyNormalOutput() throws IOException {
-        return baseBenchmark(os -> new SnappyOutputStream(os, InputGenerator.BUFFER_SIZE));
+    public static byte[] compress(byte[] srcBytes) throws IOException {
+        return Snappy.compress(srcBytes);
     }
 
-    @Benchmark
-    int snappyFrameOutput() throws IOException {
-        return baseBenchmark(SnappyFramedOutputStream::new);
+    public static byte[] uncompress(byte[] bytes) throws IOException {
+        return Snappy.uncompress(bytes);
     }
 }
