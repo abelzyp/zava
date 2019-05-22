@@ -1,0 +1,235 @@
+/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin/java -Dfile.encoding=UTF-8 -classpath /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/tools.jar:/Users/zhangyupeng/exercise/zava/target/test-classes:/Users/zhangyupeng/exercise/zava/target/classes:/Users/zhangyupeng/.m2/repository/com/google/guava/guava/23.0/guava-23.0.jar:/Users/zhangyupeng/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/zhangyupeng/.m2/repository/com/google/errorprone/error_prone_annotations/2.0.18/error_prone_annotations-2.0.18.jar:/Users/zhangyupeng/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/zhangyupeng/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/zhangyupeng/.m2/repository/org/apache/commons/commons-lang3/3.6/commons-lang3-3.6.jar:/Users/zhangyupeng/.m2/repository/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.jar:/Users/zhangyupeng/.m2/repository/org/springframework/spring-core/5.1.2.RELEASE/spring-core-5.1.2.RELEASE.jar:/Users/zhangyupeng/.m2/repository/org/springframework/spring-jcl/5.1.2.RELEASE/spring-jcl-5.1.2.RELEASE.jar:/Users/zhangyupeng/.m2/repository/org/springframework/spring-beans/5.1.2.RELEASE/spring-beans-5.1.2.RELEASE.jar:/Users/zhangyupeng/.m2/repository/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar:/Users/zhangyupeng/.m2/repository/org/springframework/spring-webmvc/5.1.2.RELEASE/spring-webmvc-5.1.2.RELEASE.jar:/Users/zhangyupeng/.m2/repository/org/springframework/spring-aop/5.1.2.RELEASE/spring-aop-5.1.2.RELEASE.jar:/Users/zhangyupeng/.m2/repository/org/springframework/spring-context/5.1.2.RELEASE/spring-context-5.1.2.RELEASE.jar:/Users/zhangyupeng/.m2/repository/org/springframework/spring-expression/5.1.2.RELEASE/spring-expression-5.1.2.RELEASE.jar:/Users/zhangyupeng/.m2/repository/org/springframework/spring-test/5.1.2.RELEASE/spring-test-5.1.2.RELEASE.jar:/Users/zhangyupeng/.m2/repository/org/projectlombok/lombok/1.18.6/lombok-1.18.6.jar:/Users/zhangyupeng/.m2/repository/org/apache/logging/log4j/log4j-api/2.11.2/log4j-api-2.11.2.jar:/Users/zhangyupeng/.m2/repository/org/apache/logging/log4j/log4j-core/2.11.2/log4j-core-2.11.2.jar:/Users/zhangyupeng/.m2/repository/org/apache/logging/log4j/log4j-web/2.11.2/log4j-web-2.11.2.jar:/Users/zhangyupeng/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.11.2/log4j-slf4j-impl-2.11.2.jar:/Users/zhangyupeng/.m2/repository/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar:/Users/zhangyupeng/.m2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar:/Users/zhangyupeng/.m2/repository/com/alibaba/fastjson/1.2.56/fastjson-1.2.56.jar:/Users/zhangyupeng/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:/Users/zhangyupeng/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar:/Users/zhangyupeng/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/zhangyupeng/.m2/repository/de/ruedigermoeller/fst/2.57/fst-2.57.jar:/Users/zhangyupeng/.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar:/Users/zhangyupeng/.m2/repository/org/objenesis/objenesis/2.5.1/objenesis-2.5.1.jar:/Users/zhangyupeng/.m2/repository/com/esotericsoftware/kryo/4.0.0/kryo-4.0.0.jar:/Users/zhangyupeng/.m2/repository/com/esotericsoftware/reflectasm/1.11.3/reflectasm-1.11.3.jar:/Users/zhangyupeng/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/Users/zhangyupeng/.m2/repository/com/esotericsoftware/minlog/1.3.0/minlog-1.3.0.jar:/Users/zhangyupeng/.m2/repository/io/protostuff/protostuff-core/1.6.0/protostuff-core-1.6.0.jar:/Users/zhangyupeng/.m2/repository/io/protostuff/protostuff-api/1.6.0/protostuff-api-1.6.0.jar:/Users/zhangyupeng/.m2/repository/io/protostuff/protostuff-runtime/1.6.0/protostuff-runtime-1.6.0.jar:/Users/zhangyupeng/.m2/repository/io/protostuff/protostuff-collectionschema/1.6.0/protostuff-collectionschema-1.6.0.jar:/Users/zhangyupeng/.m2/repository/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar:/Users/zhangyupeng/.m2/repository/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3.jar:/Users/zhangyupeng/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/zhangyupeng/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/zhangyupeng/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.jar:/Users/zhangyupeng/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/Users/zhangyupeng/.m2/repository/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar:/Users/zhangyupeng/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21.jar serialize.SerializationJmhTest
+# JMH version: 1.21
+# VM version: JDK 1.8.0_121, Java HotSpot(TM) 64-Bit Server VM, 25.121-b13
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/bin/java
+# VM options: -server -Xms2048m -Xmx2048m
+# Warmup: 5 iterations, 10 s each
+# Measurement: 10 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: serialize.SerializationJmhTest.fastjsonSerialize
+
+# Run progress: 0.00% complete, ETA 00:10:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 92.644 ops/ms
+# Warmup Iteration   2: 97.011 ops/ms
+# Warmup Iteration   3: 102.770 ops/ms
+# Warmup Iteration   4: 102.435 ops/ms
+# Warmup Iteration   5: 97.002 ops/ms
+Iteration   1: 82.333 ops/ms
+Iteration   2: 94.691 ops/ms
+Iteration   3: 101.487 ops/ms
+Iteration   4: 103.840 ops/ms
+Iteration   5: 103.534 ops/ms
+Iteration   6: 100.596 ops/ms
+Iteration   7: 100.976 ops/ms
+Iteration   8: 100.799 ops/ms
+Iteration   9: 105.134 ops/ms
+Iteration  10: 95.948 ops/ms
+
+
+Result "serialize.SerializationJmhTest.fastjsonSerialize":
+  98.934 ±(99.9%) 10.118 ops/ms [Average]
+  (min, avg, max) = (82.333, 98.934, 105.134), stdev = 6.693
+  CI (99.9%): [88.815, 109.052] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_121, Java HotSpot(TM) 64-Bit Server VM, 25.121-b13
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/bin/java
+# VM options: -server -Xms2048m -Xmx2048m
+# Warmup: 5 iterations, 10 s each
+# Measurement: 10 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: serialize.SerializationJmhTest.fstSerialize
+
+# Run progress: 16.67% complete, ETA 00:08:23
+# Fork: 1 of 1
+# Warmup Iteration   1: 408.266 ops/ms
+# Warmup Iteration   2: 434.022 ops/ms
+# Warmup Iteration   3: 441.810 ops/ms
+# Warmup Iteration   4: 402.743 ops/ms
+# Warmup Iteration   5: 431.026 ops/ms
+Iteration   1: 440.220 ops/ms
+Iteration   2: 431.731 ops/ms
+Iteration   3: 428.172 ops/ms
+Iteration   4: 436.342 ops/ms
+Iteration   5: 435.891 ops/ms
+Iteration   6: 442.952 ops/ms
+Iteration   7: 425.780 ops/ms
+Iteration   8: 443.005 ops/ms
+Iteration   9: 438.443 ops/ms
+Iteration  10: 439.431 ops/ms
+
+
+Result "serialize.SerializationJmhTest.fstSerialize":
+  436.197 ±(99.9%) 8.967 ops/ms [Average]
+  (min, avg, max) = (425.780, 436.197, 443.005), stdev = 5.931
+  CI (99.9%): [427.229, 445.164] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_121, Java HotSpot(TM) 64-Bit Server VM, 25.121-b13
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/bin/java
+# VM options: -server -Xms2048m -Xmx2048m
+# Warmup: 5 iterations, 10 s each
+# Measurement: 10 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: serialize.SerializationJmhTest.gsonSerialize
+
+# Run progress: 33.33% complete, ETA 00:06:42
+# Fork: 1 of 1
+# Warmup Iteration   1: 40.063 ops/ms
+# Warmup Iteration   2: 47.094 ops/ms
+# Warmup Iteration   3: 49.302 ops/ms
+# Warmup Iteration   4: 51.222 ops/ms
+# Warmup Iteration   5: 50.104 ops/ms
+Iteration   1: 47.785 ops/ms
+Iteration   2: 49.382 ops/ms
+Iteration   3: 51.701 ops/ms
+Iteration   4: 51.553 ops/ms
+Iteration   5: 51.051 ops/ms
+Iteration   6: 50.444 ops/ms
+Iteration   7: 51.383 ops/ms
+Iteration   8: 51.803 ops/ms
+Iteration   9: 51.362 ops/ms
+Iteration  10: 51.528 ops/ms
+
+
+Result "serialize.SerializationJmhTest.gsonSerialize":
+  50.799 ±(99.9%) 1.943 ops/ms [Average]
+  (min, avg, max) = (47.785, 50.799, 51.803), stdev = 1.285
+  CI (99.9%): [48.856, 52.742] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_121, Java HotSpot(TM) 64-Bit Server VM, 25.121-b13
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/bin/java
+# VM options: -server -Xms2048m -Xmx2048m
+# Warmup: 5 iterations, 10 s each
+# Measurement: 10 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: serialize.SerializationJmhTest.jacksonSerialize
+
+# Run progress: 50.00% complete, ETA 00:05:02
+# Fork: 1 of 1
+# Warmup Iteration   1: 39.623 ops/ms
+# Warmup Iteration   2: 53.670 ops/ms
+# Warmup Iteration   3: 53.559 ops/ms
+# Warmup Iteration   4: 52.198 ops/ms
+# Warmup Iteration   5: 53.878 ops/ms
+Iteration   1: 54.099 ops/ms
+Iteration   2: 53.588 ops/ms
+Iteration   3: 53.745 ops/ms
+Iteration   4: 54.131 ops/ms
+Iteration   5: 53.442 ops/ms
+Iteration   6: 53.669 ops/ms
+Iteration   7: 53.010 ops/ms
+Iteration   8: 46.062 ops/ms
+Iteration   9: 51.109 ops/ms
+Iteration  10: 53.591 ops/ms
+
+
+Result "serialize.SerializationJmhTest.jacksonSerialize":
+  52.645 ±(99.9%) 3.731 ops/ms [Average]
+  (min, avg, max) = (46.062, 52.645, 54.131), stdev = 2.468
+  CI (99.9%): [48.913, 56.376] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_121, Java HotSpot(TM) 64-Bit Server VM, 25.121-b13
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/bin/java
+# VM options: -server -Xms2048m -Xmx2048m
+# Warmup: 5 iterations, 10 s each
+# Measurement: 10 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: serialize.SerializationJmhTest.jdkSerialize
+
+# Run progress: 66.67% complete, ETA 00:03:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 198.898 ops/ms
+# Warmup Iteration   2: 207.353 ops/ms
+# Warmup Iteration   3: 208.767 ops/ms
+# Warmup Iteration   4: 208.964 ops/ms
+# Warmup Iteration   5: 202.239 ops/ms
+Iteration   1: 199.878 ops/ms
+Iteration   2: 208.798 ops/ms
+Iteration   3: 204.532 ops/ms
+Iteration   4: 201.722 ops/ms
+Iteration   5: 210.393 ops/ms
+Iteration   6: 212.099 ops/ms
+Iteration   7: 210.859 ops/ms
+Iteration   8: 208.699 ops/ms
+Iteration   9: 205.605 ops/ms
+Iteration  10: 202.105 ops/ms
+
+
+Result "serialize.SerializationJmhTest.jdkSerialize":
+  206.469 ±(99.9%) 6.499 ops/ms [Average]
+  (min, avg, max) = (199.878, 206.469, 212.099), stdev = 4.298
+  CI (99.9%): [199.970, 212.968] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_121, Java HotSpot(TM) 64-Bit Server VM, 25.121-b13
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/bin/java
+# VM options: -server -Xms2048m -Xmx2048m
+# Warmup: 5 iterations, 10 s each
+# Measurement: 10 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: serialize.SerializationJmhTest.protostuffSerialize
+
+# Run progress: 83.33% complete, ETA 00:01:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 401.967 ops/ms
+# Warmup Iteration   2: 410.938 ops/ms
+# Warmup Iteration   3: 416.354 ops/ms
+# Warmup Iteration   4: 416.031 ops/ms
+# Warmup Iteration   5: 405.269 ops/ms
+Iteration   1: 418.584 ops/ms
+Iteration   2: 420.325 ops/ms
+Iteration   3: 421.317 ops/ms
+Iteration   4: 420.888 ops/ms
+Iteration   5: 394.106 ops/ms
+Iteration   6: 342.948 ops/ms
+Iteration   7: 410.239 ops/ms
+Iteration   8: 412.486 ops/ms
+Iteration   9: 405.260 ops/ms
+Iteration  10: 383.172 ops/ms
+
+
+Result "serialize.SerializationJmhTest.protostuffSerialize":
+  402.933 ±(99.9%) 37.117 ops/ms [Average]
+  (min, avg, max) = (342.948, 402.933, 421.317), stdev = 24.550
+  CI (99.9%): [365.816, 440.049] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:10:03
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                  Mode  Cnt    Score    Error   Units
+SerializationJmhTest.fastjsonSerialize    thrpt   10   98.934 ± 10.118  ops/ms
+SerializationJmhTest.fstSerialize         thrpt   10  436.197 ±  8.967  ops/ms
+SerializationJmhTest.gsonSerialize        thrpt   10   50.799 ±  1.943  ops/ms
+SerializationJmhTest.jacksonSerialize     thrpt   10   52.645 ±  3.731  ops/ms
+SerializationJmhTest.jdkSerialize         thrpt   10  206.469 ±  6.499  ops/ms
+SerializationJmhTest.protostuffSerialize  thrpt   10  402.933 ± 37.117  ops/ms
+
+Process finished with exit code 0
+
