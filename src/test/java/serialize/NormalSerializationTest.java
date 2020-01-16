@@ -42,7 +42,7 @@ public class NormalSerializationTest {
     public void gsonSerialzeTest() {
 
         String serialize = GsonSerialize.serialize(poiGoodsPrice);
-        long size = RamUsageEstimator.sizeOf(serialize);
+        long size = RamUsageEstimator.sizeOf(serialize.getBytes());
 //        PoiGoodsPrice deserialize = (PoiGoodsPrice) GsonSerialize.deserialize(serialize, PoiGoodsPrice.class);
         log.info(SIZE, GsonSerialize.class.getSimpleName(), size);
     }
@@ -51,7 +51,7 @@ public class NormalSerializationTest {
     public void fastjsonSerializeTest() {
 
         String serialize = FastjsonSerialize.serialize(poiGoodsPrice);
-        long size = RamUsageEstimator.sizeOf(serialize);
+        long size = RamUsageEstimator.sizeOf(serialize.getBytes());
 //        PoiGoodsPrice deserialize = (PoiGoodsPrice) FastjsonSerialize.deserialize(serialize, PoiGoodsPrice.class);
         log.info(SIZE, FastjsonSerialize.class.getSimpleName(), size);
     }
@@ -60,7 +60,7 @@ public class NormalSerializationTest {
     public void jacksonSerializeTest() throws IOException {
 
         String serialize = JacksonSerialize.serialize(poiGoodsPrice);
-        long size = RamUsageEstimator.sizeOf(serialize);
+        long size = RamUsageEstimator.sizeOf(serialize.getBytes());
 //        PoiGoodsPrice deserialize = (PoiGoodsPrice) JacksonSerialize.deserialize(serialize, PoiGoodsPrice.class);
         log.info(SIZE, JacksonSerialize.class.getSimpleName(), size);
     }

@@ -1,7 +1,6 @@
 package serialize.size;
 
 import org.apache.commons.lang3.tuple.Triple;
-import org.apache.lucene.util.RamUsageEstimator;
 
 /**
  * RamUsageEstimator 根据java对象在堆内存中的存储格式，
@@ -13,6 +12,7 @@ import org.apache.lucene.util.RamUsageEstimator;
 public class ObjectSize {
 
     public static Triple<Long, Long, String> size(Object o) {
+        /*
         //计算指定对象本身在堆空间的大小，单位字节
         long shallowSize = RamUsageEstimator.shallowSizeOf(o);
         //计算指定对象及其引用树上的所有对象的综合大小，单位字节
@@ -20,5 +20,9 @@ public class ObjectSize {
         //计算指定对象及其引用树上的所有对象的综合大小，返回可读的结果，如：2KB
         String humanSize = RamUsageEstimator.humanSizeOf(o);
         return Triple.of(shallowSize, size, humanSize);
+        */
+
+        //原有方法不可用
+        return Triple.of(0L, 0L, "");
     }
 }
