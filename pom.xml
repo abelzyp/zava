@@ -54,7 +54,7 @@
         <!--压缩工具包-->
         <lz4.version>1.3.0</lz4.version>
         <snappy.version>1.1.7.3</snappy.version>
-        <commons-compress.version>1.18</commons-compress.version>
+        <commons-compress.version>1.19</commons-compress.version>
         <lzo-core.version>1.0.6</lzo-core.version>
         <!--计算对象占用内存大小-->
         <lucene.version>7.1.0</lucene.version>
