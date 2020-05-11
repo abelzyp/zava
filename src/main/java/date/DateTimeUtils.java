@@ -125,9 +125,18 @@ class DateTimeUtils {
             return new ArrayList<>();
         }
         return Stream.iterate(startLocalDate, d -> d.plusDays(1))
-                     //这里可以调整是否包含结束日期
-                     .limit(traverse + 1)
-                     .map(DateTimeUtils::parseLocalDateToYyyyMmDd)
-                     .collect(Collectors.toList());
+                //这里可以调整是否包含结束日期
+                .limit(traverse + 1)
+                .map(DateTimeUtils::parseLocalDateToYyyyMmDd)
+                .collect(Collectors.toList());
+    }
+
+    /**
+     * 获取基于当前日期的昨日日期
+     *
+     * @return 昨日日期，yyyyMMdd格式
+     */
+    public static String getYesterdayYyyyMMdd() {
+        return LocalDate.now().minusDays(1L).format(DateTimeFormatter.BASIC_ISO_DATE);
     }
 }

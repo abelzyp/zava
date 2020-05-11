@@ -57,4 +57,10 @@ public class DateTimeUtilsTest {
         List<String> traversingList = DateTimeUtils.traversingTwoYyyyMmDd(yyyyMmDd1, yyyyMmDd2);
         Assert.assertEquals(2370, traversingList.size());
     }
+
+    @Test
+    public void getYesterdayYyyyMMddTest() {
+        String yesterdayYyyyMMdd = DateTimeUtils.getYesterdayYyyyMMdd();
+        System.out.println(yesterdayYyyyMMdd);
+    }
 }
