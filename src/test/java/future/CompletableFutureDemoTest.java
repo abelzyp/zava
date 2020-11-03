@@ -3,6 +3,7 @@ package future;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
@@ -79,5 +80,36 @@ public class CompletableFutureDemoTest {
         }
         long retrievalTime = ((System.nanoTime() - start) / 1_000_000);
         System.out.println("Price returned after " + retrievalTime + "msecs");
+    }
+
+    /**
+     * CompletableFuture 提供了 join() 方法，它的功能和 get() 方法一样都是阻塞获取值，
+     * 它们的区别在于 join() 抛出的是 unchecked Exception。
+     */
+    @Test
+    public void supplyTest() {
+        CompletableFuture<String> future1 =
+                CompletableFuture.supplyAsync(() -> {
+                    throw new RuntimeException();
+                })
+                        .exceptionally(ex -> "errorResultA")
+                        .thenApply(resultA -> resultA + " resultB")
+                        .thenApply(resultB -> resultB + " resultC")
+                        .thenApply(resultC -> resultC + " resultD");
+        System.out.println(future1.join());
+
+        CompletableFuture<String> future2 = CompletableFuture.supplyAsync(() -> "resultA")
+                .thenApply(resultA -> resultA + " resultB")
+                .thenApply(resultB -> {
+                    throw new RuntimeException();
+                })
+                .handle((o, throwable) -> {
+                    if (throwable != null) {
+                        return "errorResultC";
+                    }
+                    return o;
+                })
+                .thenApply(resultC -> resultC + " resultD");
+        System.out.println(future2.join());
     }
 }
