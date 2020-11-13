@@ -59,7 +59,7 @@
         <!--计算对象占用内存大小-->
         <lucene.version>7.1.0</lucene.version>
         <!--测试工具-->
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <jmh.version>1.21</jmh.version>
     </properties>
 
