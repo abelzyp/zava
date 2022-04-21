@@ -1,4 +1,4 @@
-package aop;
+package aop.javassist;
 
 import javassist.CannotCompileException;
 import javassist.ClassPool;
@@ -15,7 +15,7 @@ import java.io.IOException;
 public class JavassistTest {
     public static void main(String[] args) throws NotFoundException, CannotCompileException, IllegalAccessException, InstantiationException, IOException {
         ClassPool cp = ClassPool.getDefault();
-        CtClass cc = cp.get("aop.Base");
+        CtClass cc = cp.get("aop.javassist.Base");
         CtMethod m = cc.getDeclaredMethod("process");
         m.insertBefore("{ System.out.println(\"start\"); }");
         m.insertAfter("{ System.out.println(\"end\"); }");

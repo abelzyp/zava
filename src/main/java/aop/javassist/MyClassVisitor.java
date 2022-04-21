@@ -1,4 +1,4 @@
-package aop;
+package aop.javassist;
 
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;

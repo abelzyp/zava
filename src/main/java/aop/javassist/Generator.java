@@ -1,4 +1,4 @@
-package aop;
+package aop.javassist;
 
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
@@ -16,7 +16,7 @@ import java.io.FileOutputStream;
 public class Generator {
     public static void main(String[] args) throws Exception {
         //读取字节码
-        ClassReader classReader = new ClassReader("aop.Base");
+        ClassReader classReader = new ClassReader("aop.javassist.Base");
         ClassWriter classWriter = new ClassWriter(ClassWriter.COMPUTE_MAXS);
         //处理
         ClassVisitor classVisitor = new MyClassVisitor(classWriter);
