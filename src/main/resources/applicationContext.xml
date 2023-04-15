@@ -12,7 +12,7 @@
 
     <context:annotation-config/>
 
-    <!--扫描类包，将标注Spring注解的类自动转化Bean，同时完成Bean注入(除Controller意外)-->
+    <!--扫描类包，将标注Spring注解的类自动转化Bean，同时完成Bean注入(除Controller以外)-->
     <context:component-scan base-package="com.zava.spring">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
