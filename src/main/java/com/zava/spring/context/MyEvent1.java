@@ -1,4 +1,4 @@
-package springframework.context;
+package com.zava.spring.context;
 
 import org.springframework.context.ApplicationEvent;
 
