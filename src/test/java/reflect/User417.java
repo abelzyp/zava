@@ -1,7 +1,7 @@
 package reflect;
 
 /**
- * @author Zhang Yupeng
+ * @author Zhang
  * @since 2023/4/17
  */
 public class User417 {
