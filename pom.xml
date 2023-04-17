@@ -6,7 +6,7 @@
 
     <groupId>com.alipapa</groupId>
     <artifactId>zava</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <issueManagement>
@@ -21,6 +21,14 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <modules>
+        <module>spring</module>
+        <module>java</module>
+        <module>google</module>
+        <module>apache</module>
+        <module>other</module>
+        <module>shell</module>
+    </modules>
     <developers>
         <developer>
             <id>abelzyp</id>
