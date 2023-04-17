@@ -3,5 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="springframework.User"></bean>
+    <!--
+    id属性:唯一标示
+    class属性:要创建对象所在类的全路径(包名称+类名称)
+    -->
+    <bean id="user" class="springframework.User"/>
 </beans>
