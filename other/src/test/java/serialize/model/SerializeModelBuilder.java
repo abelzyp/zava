@@ -1,6 +1,6 @@
 package serialize.model;
 
-import com.google.common.collect.Lists;
+import org.apache.commons.compress.utils.Lists;
 
 import java.time.LocalDate;
 import java.util.List;

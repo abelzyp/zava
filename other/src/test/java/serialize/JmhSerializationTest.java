@@ -80,7 +80,7 @@ public class JmhSerializationTest {
                 .warmupIterations(2)
                 .measurementIterations(5)
                 .forks(1)
-                .jvmArgs("-server", "-Xms2048m", "-Xmx2048m")
+                .jvmArgs("-event", "-Xms2048m", "-Xmx2048m")
 //                .addProfiler(GCProfiler.class)
 //                .addProfiler(StackProfiler.class)
                 .build();

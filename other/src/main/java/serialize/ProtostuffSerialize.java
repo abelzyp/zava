@@ -1,6 +1,5 @@
 package serialize;
 
-import com.google.common.base.Preconditions;
 import io.protostuff.LinkedBuffer;
 import io.protostuff.ProtostuffIOUtil;
 import io.protostuff.Schema;
@@ -37,7 +36,9 @@ public class ProtostuffSerialize {
 
     @SuppressWarnings("unchecked")
     private static <T> Schema<T> getSchema(Class<T> clazz) {
-        Preconditions.checkNotNull(clazz);
+        if (clazz == null) {
+            throw new NullPointerException();
+        }
         Schema<T> schema = (Schema<T>) SCHEMA_CACHE.get(clazz);
         if (null == schema) {
             schema = RuntimeSchema.getSchema(clazz);
@@ -45,6 +46,11 @@ public class ProtostuffSerialize {
                 SCHEMA_CACHE.put(clazz, schema);
             }
         }
-        return Preconditions.checkNotNull(schema);
+
+        if (schema == null) {
+            throw new NullPointerException();
+        } else {
+            return schema;
+        }
     }
 }

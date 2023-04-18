@@ -1,6 +1,5 @@
 package idea;
 
-import org.apache.commons.collections4.CollectionUtils;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -51,8 +50,6 @@ public class HotKeys implements Serializable {
         //new ArrayList<String>().var
         ArrayList<String> list = new ArrayList<>();
         //CollectionUtils.isEmpty(list).not.if
-        if (!CollectionUtils.isEmpty(list)) {
-        }
         //list.for
         for (String s : list) {
         }
