@@ -1,4 +1,4 @@
-package JavaFoundation.Abstract;
+package javaabstract;
 
 /*
  * 抽象类的概述：

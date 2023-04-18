@@ -1,4 +1,4 @@
-package JavaFoundation.Abstract;
+package javaabstract;
 
 /*
  * 一个类如果没有抽象方法，可不可以定义为抽象类?如果可以，有什么意义?

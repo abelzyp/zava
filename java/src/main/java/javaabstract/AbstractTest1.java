@@ -1,4 +1,4 @@
-package JavaFoundation.Abstract;
+package javaabstract;
 
 /*
  * 老师案例
