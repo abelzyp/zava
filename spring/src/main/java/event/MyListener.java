@@ -1,4 +1,4 @@
-package context;
+package event;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
@@ -11,9 +11,9 @@ import org.springframework.stereotype.Component;
  * @since 2023/4/12
  */
 @Component
-public class Listener1 implements ApplicationListener<MyEvent1> {
+public class MyListener implements ApplicationListener<MyEvent> {
     @Override
-    public void onApplicationEvent(MyEvent1 event) {
+    public void onApplicationEvent(MyEvent event) {
         System.out.println("listener1 收到事件通知:" + event.getMessage());
     }
 }

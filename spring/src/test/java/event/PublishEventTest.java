@@ -1,12 +1,11 @@
-package server;
+package event;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import spring.server.HelloService;
 
 
 /**
@@ -14,18 +13,18 @@ import spring.server.HelloService;
  * ContextConfiguration启动Spring容器
  *
  * @author Abel
- * @date 2018/6/1
+ * @date 2023/4/15
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:applicationContext.xml")
-public class HelloServiceTest {
+@ContextConfiguration(locations = "classpath:applicationContext-event.xml")
+public class PublishEventTest {
 
     @Autowired
-    private HelloService helloService;
+    private ApplicationEventPublisher applicationEventPublisher;
 
     @Test
     public void sayHello() {
-        String name = "Abel";
-        Assert.assertEquals("Hello " + name + " !", helloService.sayHello(name));
+        MyEvent myEvent = new MyEvent(this, "新消息");
+        applicationEventPublisher.publishEvent(myEvent);
     }
 }

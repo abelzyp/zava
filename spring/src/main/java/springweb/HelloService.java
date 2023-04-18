@@ -1,4 +1,4 @@
-package spring.server;
+package springweb;
 
 import org.springframework.stereotype.Service;
 

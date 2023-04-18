@@ -1,4 +1,4 @@
-package springframework;
+package bean;
 
 /**
  * @author Zhang

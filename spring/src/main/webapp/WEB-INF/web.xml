@@ -12,7 +12,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:applicationContext.xml</param-value>
+        <param-value>classpath:applicationContext-mvc.xml</param-value>
     </context-param>
 
     <!--负责启动Spring容器的监听器，它将引用context-param获取Spring配置文件地址-->

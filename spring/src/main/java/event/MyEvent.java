@@ -1,4 +1,4 @@
-package context;
+package event;
 
 import org.springframework.context.ApplicationEvent;
 
@@ -8,11 +8,11 @@ import org.springframework.context.ApplicationEvent;
  * @author Zhang
  * @since 2023/4/12
  */
-public class MyEvent1 extends ApplicationEvent {
+public class MyEvent extends ApplicationEvent {
 
     private String message;
 
-    public MyEvent1(Object source, String message) {
+    public MyEvent(Object source, String message) {
         super(source);
         this.message = message;
     }

@@ -1,12 +1,11 @@
-package client;
+package springweb;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import spring.server.HelloService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 
 /**
  * @author Abel
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class HelloController {
 
-    @Autowired
+    @Resource
     private HelloService helloService;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
