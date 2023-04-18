@@ -1,5 +1,3 @@
-package commons;
-
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
