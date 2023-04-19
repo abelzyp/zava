@@ -11,9 +11,9 @@ import org.springframework.stereotype.Component;
  * @since 2023/4/12
  */
 @Component
-public class MyListener implements ApplicationListener<MyEvent> {
+public class MyListener419 implements ApplicationListener<MyEvent> {
     @Override
     public void onApplicationEvent(MyEvent event) {
-        System.out.println("my listener 收到事件通知:" + event.getMessage());
+        System.out.println("my listener 419  也收到事件通知:" + event.getMessage());
     }
 }
