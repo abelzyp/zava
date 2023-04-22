@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    id属性:唯一标示
+    class属性:要创建对象所在类的全路径(包名称+类名称)
+    -->
+    <bean id="specialValue" class="bean.SpecialValue">
+        <!--1 字面量-->
+        <property name="normal" value="字面量"/>
+        <!--2 null值-->
+        <property name="nullValue">
+            <null/>
+        </property>
+        <!--3 xml实体-->
+        <property name="xmlEntity" value="&lt; &gt;"/>
+        <!--4 CDATA节-->
+        <property name="cdataValue">
+            <value><![CDATA[a<b]]]></value>
+        </property>
+    </bean>
+</beans>
