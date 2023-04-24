@@ -1,6 +1,5 @@
 package bean;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

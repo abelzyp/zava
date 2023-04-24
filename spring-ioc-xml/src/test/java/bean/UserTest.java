@@ -21,7 +21,7 @@ public class UserTest {
     @Test
     public void getBean() {
         //1.加载Spring配置文件
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/bean.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("springxml/bean.xml");
         //2.获取创建的Bean对象
         User user = context.getBean("user", User.class);
         System.out.println(user);

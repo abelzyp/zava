@@ -7,7 +7,7 @@ public class SpecialValueTest {
 
     @Test
     public void testSpecialValue() {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/bean-di.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("springxml/bean-di.xml");
         SpecialValue specialValue = context.getBean("specialValue", SpecialValue.class);
         System.out.println(specialValue);
     }

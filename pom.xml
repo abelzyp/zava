@@ -28,6 +28,7 @@
         <module>other</module>
         <module>shell</module>
         <module>spring</module>
+        <module>spring-ioc-xml</module>
     </modules>
     <developers>
         <developer>
