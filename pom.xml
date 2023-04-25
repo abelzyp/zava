@@ -29,6 +29,7 @@
         <module>shell</module>
         <module>spring</module>
         <module>spring-ioc-xml</module>
+        <module>spring-ioc-annotation</module>
     </modules>
     <developers>
         <developer>
