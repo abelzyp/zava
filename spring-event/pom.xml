@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring</artifactId>
+    <artifactId>spring-event</artifactId>
 
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
@@ -22,12 +22,7 @@
         <!--Spring-->
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-aspects</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
+            <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
         </dependency>
         <dependency>

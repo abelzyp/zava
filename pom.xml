@@ -27,7 +27,7 @@
         <module>java</module>
         <module>other</module>
         <module>shell</module>
-        <module>spring</module>
+        <module>spring-event</module>
         <module>spring-ioc-xml</module>
         <module>spring-ioc-annotation</module>
     </modules>

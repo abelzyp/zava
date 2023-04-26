@@ -20,8 +20,11 @@ public class PublishMultiEventTest {
     @Autowired
     private ApplicationEventPublisher applicationEventPublisher;
 
+    /**
+     * 预期无输出，publishEvent直接发布List，subscriber无法直接订阅，Spring按照类型解析
+     */
     @Test
-    public void publishMultiEvent() {
+    public void testPublishMultiEvent() {
         MyEvent myEvent1 = new MyEvent(this, "新消息1");
         MyEvent myEvent2 = new MyEvent(this, "新消息2");
         MyEvent myEvent3 = new MyEvent(this, "新消息3");
