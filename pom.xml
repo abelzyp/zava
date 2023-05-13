@@ -31,6 +31,7 @@
         <module>spring-ioc-xml</module>
         <module>spring-ioc-annotation</module>
         <module>spring-junit</module>
+        <module>spring-i18n</module>
     </modules>
     <developers>
         <developer>
