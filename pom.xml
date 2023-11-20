@@ -32,6 +32,7 @@
         <module>spring-ioc-annotation</module>
         <module>spring-junit</module>
         <module>spring-i18n</module>
+        <module>spock</module>
     </modules>
     <developers>
         <developer>
