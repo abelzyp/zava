@@ -35,7 +35,7 @@
         <jmh.version>1.21</jmh.version>
 
         <!--Apache-->
-        <commons-lang3.version>3.6</commons-lang3.version>
+        <commons-lang3.version>3.18.0</commons-lang3.version>
     </properties>
 
     <dependencies>
